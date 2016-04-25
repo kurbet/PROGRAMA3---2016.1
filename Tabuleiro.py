@@ -6,6 +6,7 @@ Created on Wed Apr 20 12:52:07 2016
 """
 
 import tkinter as tk
+from codigo.py import *
 
 class tabuleiro:
     def __init__(self):
