@@ -19,7 +19,7 @@ class Jogo():
         self.matriz = zeros((3,3))      #cria a matriz 3 por 3
         self.turno = 1          #cria os turnos e começa com 1(O)
         
-    def recebe_jogada(linha,coluna):
+    def recebe_jogada(self,linha,coluna):
         if self.turno == 1:         #saber quem ta jogando
             self.matriz[linha][coluna] = 1      #marca 1(O) na matriz
             self.turno = 2          #alterna turno
@@ -27,7 +27,7 @@ class Jogo():
             self.matriz[linha][coluna] = 2      #marca 2(X) na matriz
             self.turno = 1          #alterna turno
         
-    def verifica_ganhador():
+    def verifica_ganhador(self):
         linha_0 = 0
         linha_1 = 0
         linha_2 = 0
@@ -87,6 +87,6 @@ class Jogo():
             return -1
             
     
-    def limpa_jogadas():            #recomeça do "zero"
+    def limpa_jogadas(self):            #recomeça do "zero"
         self.matriz = zeros((3,3))
         self.turno = 1
