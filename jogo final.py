@@ -77,20 +77,11 @@ class Tabuleiro:
         return str(col_floor) + str(row_floor)
 
     def find_coords_of_selected_sq(self, evt):
-        """
-        finding coords in a 9-sq grid
-
-        params: event triggered by user's click
-        return: tuple of two values for second corner's col, row
-        """
         # salva a coluna e linha em 2 variaveis
         column, row = self.get_row_col(evt)
-        
         column_floor, row_floor = self.floor_of_row_col(column, row)
-
         # define aonde do tabuleiro estará o clique
         rowcol_key_str = self.convert_to_key(column_floor, row_floor)
-
         corner_column = (column_floor * self.sq_size) + self.sq_size
         corner_row =  (row_floor  * self.sq_size) + self.sq_size
         print("rowcol_key_str: " + str(rowcol_key_str))
